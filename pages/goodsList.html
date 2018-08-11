@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1,minimum-scale=1">
+  <link rel="stylesheet" href="/lib/mui/css/mui.css">
+  <link rel="stylesheet" href="/lib/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/goodsList.css">
+  <title>品优购-分类</title>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header class="pyg_header">
+    <!-- 搜索框 -->
+    <div class="mui-input-row mui-search">
+      <input type="search" class="mui-input-clear" placeholder="">
+    </div>
+  </header>
+  <div class="pyg_view">
+    <div class="categories">
+      <!-- 左边 导航-->
+      <div class="left">
+        <ul>
+            
+        </ul>
+        <!-- 模板 left -->
+      </div>
+      <!-- 右边 详情 -->
+      <div class="right">
+        <div class="right_wai">
+          <!-- 模板 right -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 底部 -->
+  <footer class="pyg_footer">
+    <a href="index.html">
+      <span class="fa fa-home"></span>
+      <p>首页</p>
+    </a>
+    <a href="/pages/goodsList.html">
+      <span class="fa fa-list-ul"></span>
+      <p>分类</p>
+    </a>
+    <a href="javascript:;">
+      <span class="fa fa-shopping-cart"></span>
+      <p>购物车</p>
+    </a>
+    <a href="javascript:;">
+      <span class="fa fa-user-circle-o"></span>
+      <p>我的</p>
+    </a>
+  </footer>
+
+  <!-- 模板 -->
+  <!-- 模板 left -->
+  <script id="left" type="text/html">
+    {{each item value index}}
+    <li data-index="{{index}}" class="{{index==0?'active':''}}">{{value.cat_name}}</li>
+    {{/each}}
+  </script>
+  <!-- 模板 right -->
+  <script id="right" type="text/html">
+    <div class="right_box">
+      {{each item2 value index}}
+    <div class="right_categories">
+        <div class="right_title"> 
+          <span>{{value.cat_name}}</span>
+        <i></i>
+        </div>
+      <div class="right_content">
+        {{each value.children value2 index2}}
+        <a href="search.html?cid={{value2.cat_id}}">
+          <img src="{{$imports.iconUrl}}{{value2.cat_icon}}" alt="">
+          <span>{{value2.cat_name}}</span>
+        </a>
+        {{/each}}
+      </div>
+    </div>
+    {{/each}} 
+   </div>
+  </script>
+  <!-- 模板 -->
+</body>
+<!-- 插件 -->
+<script src="/lib/mui/js/mui.min.js"></script>
+<script src="/lib/zepto/zepto.js"></script>
+<script src="/lib/iscroll/iscroll.js"></script>
+<script src="/lib/arttemplate/template-web.js"></script>
+<!-- 公共js -->
+<script src="/js/common.js"></script>
+<!-- 當前頁面js -->
+<script src="/js/goodsList.js"></script>
+
+</html>

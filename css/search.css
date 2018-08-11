@@ -1,0 +1,122 @@
+body {
+  padding: 90px 0 50px;
+  height: 100%;
+}
+
+.search_header {
+  height: 45PX;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search_header i {
+  width: 60px;
+  text-align: center;
+  color: #666;
+  line-height: 45px;
+}
+
+.search_header input {
+  height: 45px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 5px 10px;
+  line-height: 45px;
+}
+
+.search_header button {
+  width: 60px;
+}
+
+.search_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 45PX;
+  left: 0;
+  height: 45PX;
+  line-height: 45px;
+  background-color: #fff4f4;
+}
+
+.search_nav a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  color: #71aff7;
+  font-size: .14rem;
+}
+
+.pyg_view {
+  padding: 0 .05rem;
+  position: relative;
+}
+
+.pyg_view ul li {
+  padding: .1rem;
+  margin: .05rem 0;
+  background-color: #fff;
+}
+
+.pyg_view ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.pyg_view ul li a i {
+  color: #a7a7a7;
+  position: absolute;
+  top: 49%;
+  right: 0;
+}
+
+.pyg_view ul li a .goods_small_logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.pyg_view ul li a .goods_small_logo img {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.pyg_view ul li a .goods_text {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  float: 2;
+  font-size: .14rem;
+  overflow: hidden;
+}
+
+.pyg_view ul li a .goods_text .goods_name {
+  color: #a7a7a7;
+  width: 100%;
+}
+
+.pyg_view ul li a .goods_text .goods_price {
+  color: #ee4949;
+}
+/*# sourceMappingURL=search.css.map */

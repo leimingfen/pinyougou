@@ -1,0 +1,92 @@
+body {
+  padding: 90px 0 50px;
+  height: 100%;
+}
+
+ .search_header{
+   height: 45PX;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   display: flex;
+   i{
+     width: 60px;
+     text-align: center;
+     color: #666;
+     line-height: 45px;
+   }
+   input{
+     height: 45px;
+     flex: 1;
+     padding: 5px 10px;
+     line-height: 45px;
+   }
+   button{
+     width: 60px;
+   }
+ }
+//  导航栏
+ .search_nav{
+   display: flex;
+   position: fixed;
+   width: 100%;
+   top: 45PX;
+   left: 0;
+   height: 45PX;
+   line-height: 45px;
+   background-color: rgb(255, 244, 244);
+   a{
+     flex: 1;
+     text-align: center;
+     color: rgb(113, 175, 247);
+     font-size: .14rem;
+   }
+ }
+ 
+ .pyg_view{
+   padding: 0 .05rem;
+   position: relative;
+   ul{
+     li{
+       padding: .1rem;
+       margin: .05rem 0;
+       background-color: #fff;
+
+       a{
+         display: flex;
+         position: relative;
+         i{
+          color: rgb(167, 167, 167);
+          position: absolute;
+          top: 49%;
+          right: 0;
+
+         }
+        .goods_small_logo{
+          flex: 1;
+          img{
+            width: 70%;
+            margin: 0 auto;
+          }
+        }
+        .goods_text{
+          flex: 2;
+          display: flex;
+          flex-direction:column;
+          justify-content: space-between;
+          float: 2;
+          font-size: .14rem;
+          overflow: hidden;
+          .goods_name{
+           color: rgb(167, 167, 167);
+           width: 100%;
+          }
+          .goods_price{
+            color: rgb(238, 73, 73);
+          }
+        }
+       }
+     }
+   }
+ }

@@ -1,0 +1,108 @@
+.pyg_view {
+  overflow: hidden;
+  height: 100%;
+}
+
+.categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: normal;
+  height: 100%;
+}
+
+.categories .left {
+  width: 1rem;
+  height: 100%;
+  font-size: .2rem;
+  background-color: #ececec;
+  overflow: hidden;
+}
+
+.categories .left ul li {
+  height: .3rem;
+  font-size: .18rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.categories .left ul .active {
+  background-color: #fff;
+}
+
+.categories .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: white;
+  overflow: scroll;
+}
+
+.categories .right .right_wai .right_categories .right_title {
+  line-height: .4rem;
+  height: .4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.categories .right .right_wai .right_categories .right_title span {
+  font-size: .15rem;
+  color: #0094ff;
+  padding: 0 .22rem;
+}
+
+.categories .right .right_wai .right_categories .right_title i {
+  display: inline-block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: .15rem;
+  height: .01rem;
+  background-color: #000;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.categories .right .right_wai .right_categories .right_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.categories .right .right_wai .right_categories .right_content a {
+  width: 33.33333%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 .1rem;
+}
+
+.categories .right .right_wai .right_categories .right_content a span {
+  font-size: .14rem;
+}
+
+.categories .right .right_wai .hide {
+  display: none;
+}
+/*# sourceMappingURL=goodsList.css.map */

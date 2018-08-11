@@ -1,0 +1,52 @@
+
+
+//轮播图 index_slider
+
+//导航 index_nav
+.index_nav {
+  display: flex;
+  a {
+    flex: 1;
+  }
+}
+//商品列表 index_googsList
+.index_goodslist{
+  padding-top: 5px;
+  .group{
+    padding: 0 10px;
+    .group_img{
+      margin-bottom: 10px;
+    }
+    .goods{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li{
+        width: 49%;
+        padding: 0 10px;
+        background-color: #fff;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        .goods_self{
+        //  .goods_name{
+        //     overflow: hidden;
+        //     height: 40px;
+        //   }
+          .goods_price{
+            color: rgb(240, 85, 85);
+          }
+        }
+        .goods_other{
+          display: flex;
+          justify-content: center;
+          .mui-btn{
+            text-align: center;
+            width: 70%;
+
+          }
+         
+        }
+      }
+    }
+  }
+}
