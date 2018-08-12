@@ -1,0 +1,46 @@
+//头部
+.register_header {
+  // height: 45px;
+  padding: 10px 15px;
+  display: flex;
+  font-size: 16px;
+  color: rgb(19, 19, 19);
+  a {
+    color: rgb(0, 122, 255);
+  }
+  span {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+// 注册页面
+.pyg_view {
+  height: 100%;
+  padding: 10px;
+  form {
+    // margin: 10px;
+    .register {
+      // margin: 10px;
+      background-color: #fff; // border-top: 1px solid rgb(177, 177, 177);
+      .security_a {
+        position: relative;
+        .security {
+          position: absolute;
+          top: 0px;
+          right: 20px;
+          width: 100px;
+        }
+      }
+    }
+  }
+  .tools{
+   padding-top: 10px;
+   display: flex;
+   button{
+     width: 50%;
+     height: 50px;
+     font-size: 20px;
+   }
+  }
+}

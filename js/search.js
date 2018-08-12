@@ -102,7 +102,9 @@ $(function () {
     document.querySelector('html').style.fontSize = fz + 'px';
     // console.log(document.querySelector('html').style.fontSize);
   }
-
+window.onresize=function(){
+  gitHTML();
+}
 
 
 

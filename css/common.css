@@ -27,7 +27,7 @@ body {
           animation: fa-spin 2s infinite linear;
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
-  font-size: .5rem;
+  font-size: 50px;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   content: "\f110";

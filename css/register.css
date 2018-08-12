@@ -1,0 +1,53 @@
+.register_header {
+  padding: 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  color: #131313;
+}
+
+.register_header a {
+  color: #007aff;
+}
+
+.register_header span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.pyg_view {
+  height: 100%;
+  padding: 10px;
+}
+
+.pyg_view form .register {
+  background-color: #fff;
+}
+
+.pyg_view form .register .security_a {
+  position: relative;
+}
+
+.pyg_view form .register .security_a .security {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  width: 100px;
+}
+
+.pyg_view .tools {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyg_view .tools button {
+  width: 50%;
+  height: 50px;
+  font-size: 20px;
+}
+/*# sourceMappingURL=register.css.map */
