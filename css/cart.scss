@@ -1,24 +1,41 @@
- 
  //头部
  .cart_header {
-  // height: 45px;
-  display: flex;
-  font-size: 16px;
-  color: rgb(19, 19, 19);
-  justify-content: space-between;
-  align-items: center;
+   // height: 45px;
+   display: flex;
+   font-size: 16px;
+   color: rgb(19, 19, 19);
+   justify-content: space-between;
+   align-items: center;
+ }
 
-}
-  .pyg_view{
-    margin: 0 10px;
-   
-    .deliverySite{
-      padding-top: 30px;
-      .site{
-        background-color: #fff;
-        border-top: 1px solid #b8b8b8;
-        border-bottom: 1px solid #b8b8b8;
-        padding: 10px 10px;
-      }
-    }
-  }
+ .pyg_view {
+   margin: 0 10px;
+   .deliverySite {
+     padding-top: 30px;
+     .site {
+       background-color: #fff;
+       border-top: 1px solid #b8b8b8;
+       border-bottom: 1px solid #b8b8b8;
+       padding: 10px 10px;
+     }
+   }
+   .indent {
+     ul {
+       li {
+         a {
+           //  display: flex;
+           .mui-media-object {
+             line-height: 42px;
+             max-width: 70px;
+             height: 70px;
+           }
+           div {
+             .mui-ellipsis{
+               color: rgb(238, 124, 30);
+             }
+           }
+         }
+       }
+     }
+   }
+ }

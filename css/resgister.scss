@@ -1,0 +1,20 @@
+ .resgister_form{
+  margin: 10px;
+  .code{
+    position: relative;
+    .code_btn{
+      position: absolute;
+      top: 0;
+      right: 5px;
+      width: auto;
+    }
+  }
+ }
+ .login_btn{
+ display: flex;
+  .login_button{
+    flex: 1;
+    padding: 10px;
+    margin: 10px 0;
+  }
+ }

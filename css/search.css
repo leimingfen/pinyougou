@@ -12,13 +12,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0;
 }
 
-.search_header i {
-  width: 60px;
-  text-align: center;
-  color: #666;
-  line-height: 45px;
+.search_header a {
+  padding-top: 10px;
 }
 
 .search_header input {
@@ -31,7 +29,10 @@ body {
 }
 
 .search_header button {
+  height: 45px;
   width: 60px;
+  margin: 0;
+  padding: 0;
 }
 
 .search_nav {
@@ -53,11 +54,11 @@ body {
           flex: 1;
   text-align: center;
   color: #71aff7;
-  font-size: .14rem;
+  font-size: .18rem;
 }
 
 .pyg_view {
-  padding: 0 .05rem;
+  padding: 45px .05rem 0;
   position: relative;
 }
 

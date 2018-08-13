@@ -26,4 +26,14 @@
   border-bottom: 1px solid #b8b8b8;
   padding: 10px 10px;
 }
+
+.pyg_view .indent ul li a .mui-media-object {
+  line-height: 42px;
+  max-width: 70px;
+  height: 70px;
+}
+
+.pyg_view .indent ul li a div .mui-ellipsis {
+  color: #ee7c1e;
+}
 /*# sourceMappingURL=cart.css.map */

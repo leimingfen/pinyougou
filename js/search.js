@@ -1,17 +1,19 @@
 $(function () {
-  // 声明一个全局变量 公共多少页
-  var Total = 1;
-  //要穿的参数 是数组
-  var searchObj = {
-    query: '',
-    cid: getValue('cid'),
+  //声明一个对象 穿过去的参数
+  var dataObj = {
+    query: "",
+    cid: $.getURLValue("cid"),
     pagenum: 1,
     pagesize: 5
   }
-  init()
-  // 初始化
+  var Total = 1;
+  // console.log(getValue("cid"));
+  init();
+  // 初始化代码
   function init() {
-    gitHTML();
+    //屏幕自适应
+    getHTML();
+
     mui.init({
       pullRefresh: {
         container: ".pyg_view",
@@ -19,32 +21,31 @@ $(function () {
           auto: true,
           //  触发下拉刷新时自动触发
           callback: function () {
-            //下拉刷新 重置里面的数据 只显示几条
-            $('.pyg_view ul').html('')
-            //页数也变成最开始的默认值1
-            searchObj.pagenum=1;
-            // 获取数据
-            getSerch(function () {
+            // 再次下拉刷新 重新回到初始状态 只显示几条数据
+            $('.pyg_view ul').html('');
+            dataObj.pagenum = 1;
+            //获取数据
+            search(function () {
               // 结束下拉刷新
               mui('.pyg_view').pullRefresh().endPulldownToRefresh();
-                // 重置 组件
-            mui('.pyg_view').pullRefresh().refresh(true);
-            })
+              // 重置 组件 结束上拉刷新的显示
+              mui('.pyg_view').pullRefresh().refresh(true);
+            });
           }
         },
         up: {
           //  触发上拉刷新时自动触发
           callback: function () {
-            //判断页数是否加载完 否则searchObj.pagenum++ 
-            if (searchObj.pagenum >= Total) {
+            // 判断还有没有下一页 有的话dataObj.pagenum++ 
+            // 计算总页数 Total/dataObj.pagesize 向上取整
+            if (dataObj.pagenum >= Total) {
               // 结束上拉加载更多 如果没有数据 传入 true 否则 传入 false
               mui('.pyg_view').pullRefresh().endPullupToRefresh(true);
               return;
-            }else{
-              // 页数++
-              searchObj.pagenum++;
-              // 页数++之后追加数据
-              getSerch(function () {
+            } else {
+              dataObj.pagenum++;
+              // 加载之后追加渲染数据
+              search(function () {
                 // 结束上拉加载更多 如果没有数据 传入 true 否则 传入 false
                 mui('.pyg_view').pullRefresh().endPullupToRefresh();
               })
@@ -53,33 +54,39 @@ $(function () {
         }
       }
     });
+
   }
-  // 获取数据
-  function getSerch(callback) {
-    $.get('goods/search', searchObj, function (res) {
+
+
+  function search(callback) {
+    $.get("goods/search", dataObj, function (res) {
       console.log(res);
-      //获取总页数
-      Total = Math.ceil(res.data.total / searchObj.pagesize);
-      console.log("总页数" + Total);
-      //渲染模板
+      // 计算总页数
+      Total=Math.ceil(res.data.total/dataObj.pagesize)
+      console.log("总页数"+Total);
+      
+      // 拿到数据
       var html = template('search', {
         item: res.data.goods
-      });
-      $('.pyg_view ul').append(html)
+      })
+      //渲染
+      $('.pyg_view ul').append(html);
+
       callback && callback();
     })
-  }
-  //获取url的值
-  function getValue(name) {
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-    var r = window.location.search.substr(1).match(reg);
-    if (r != null) return decodeURI(r[2]);
-    return null;
+    // 根据url上的key来获取值
+
   }
 
 
 
 
+//给a注册点击跳转
+
+$('.pyg_view ul').on('tap','a',function(){
+  console.log(123123123123132);
+  location.href=this.href;
+})
 
 
 
@@ -90,39 +97,19 @@ $(function () {
 
 
 
-  // 自适应
-  function gitHTML() {
-    //基础值
+
+
+
+  // 屏幕自适应
+  function getHTML() {
     var htmlfz = 100;
-    // 文档宽
     var docwidth = 375;
-    var htmlwidth = document.querySelector('html').offsetWidth;
-    console.log(htmlwidth);
-    var fz = htmlwidth * htmlfz / docwidth;
+    var Width = document.querySelector('html').offsetWidth;
+    var fz = Width * htmlfz / docwidth;
     document.querySelector('html').style.fontSize = fz + 'px';
-    // console.log(document.querySelector('html').style.fontSize);
   }
-window.onresize=function(){
-  gitHTML();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // 进入页面加载屏幕自适应
+  onresize = function () {
+    getHTML();
+  }
 })

@@ -10,12 +10,11 @@ body {
    left: 0;
    width: 100%;
    display: flex;
-   i{
-     width: 60px;
-     text-align: center;
-     color: #666;
-     line-height: 45px;
-   }
+   padding: 0;
+  a{
+    padding-top: 10px;
+
+  }
    input{
      height: 45px;
      flex: 1;
@@ -23,7 +22,10 @@ body {
      line-height: 45px;
    }
    button{
+    height: 45px;
      width: 60px;
+     margin: 0;
+     padding: 0;
    }
  }
 //  导航栏
@@ -40,12 +42,12 @@ body {
      flex: 1;
      text-align: center;
      color: rgb(113, 175, 247);
-     font-size: .14rem;
+     font-size: .18rem;
    }
  }
  
  .pyg_view{
-   padding: 0 .05rem;
+   padding: 45px .05rem 0;
    position: relative;
    ul{
      li{

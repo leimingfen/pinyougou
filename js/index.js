@@ -35,7 +35,7 @@ $(function () {
   //商品列表
   function index_goodslist(){
     $.get("home/goodslist",function(res){
-      console.log(res);
+      // console.log(res);
       
       var html=template('index_goodslist',{item:res.data})
       $('.index_goodslist').html(html);

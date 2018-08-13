@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1,minimum-scale=1">
+  <link rel="stylesheet" href="/lib/mui/css/mui.css">
+  <link rel="stylesheet" href="/lib/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/goods_detail.css">
+  <title>品优购-商品详情</title>
+</head>
+
+<body class="">
+  <!-- <i class="fa fa-spinner fa-spin"></i> -->
+  <!-- 头部 -->
+  <header class="mui-bar mui-bar-nav">
+              <!-- mui-action-back mui-icon mui-icon-left-nav mui-pull-left  back属性 自动回去 -->
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left " ></a>
+    <h1 class="mui-title">商品详情</h1>
+  </header>
+  <!-- <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i> -->
+  <div class="pyg_view">
+    
+  </div>
+  <!-- 底部 -->
+  <footer class="goods_footer">
+    <a href="javascript:;">
+      <span class="mui-icon mui-icon-chatbubble"></span>
+      <span>客服</span>
+    </a>
+    <a href="javascript:;">
+      <span class="mui-icon mui-icon-download"></span>
+      <span>客服</span>
+    </a>
+    <a href="javascript:;">
+
+      购物车
+    </a>
+    <a href="javascript:;">
+
+      我的
+    </a>
+  </footer>
+
+  <!-- 模板 -->
+  <script id="goods_detail" type="text/html">
+  <!-- 轮播图 -->
+  <div class="mui-slider">
+      <div class="mui-slider-group mui-slider-loop">
+        <!--支持循环，需要重复图片节点-->
+        <div class="mui-slider-item mui-slider-item-duplicate">
+          <a href="#">
+            <img src="{{item.pics[item.pics.length-1].pics_mid_url}}" />
+          </a>
+        </div>
+        {{each item.pics value index}}
+        <div class="mui-slider-item">
+          <a href="#">
+            <img src="{{value.pics_mid_url}}" />
+          </a>
+        </div>
+       {{/each}}
+        <!--支持循环，需要重复图片节点-->
+        <div class="mui-slider-item mui-slider-item-duplicate">
+          <a href="#">
+            <img src="{{item.pics[0].pics_mid_url}}" />
+          </a>
+        </div>
+      </div>
+      <div class="mui-slider-indicator">
+          {{each item.pics value index}}
+        <div class="mui-indicator {{index==0?'mui-active':''}}"></div>
+        {{/each}}
+      </div>
+    </div>
+    <!-- 轮播图 -->
+    <!-- 标题 -->
+    <div class="goods_title">
+      {{item.goods_name}}
+    </div>
+    <!-- 标题 -->
+    <!-- 价格 -->
+    <div class="googs_price">￥{{item.goods_price}}</div>
+    <!-- 价格 -->
+    <!-- 运费 -->
+    <div class="goods_carriage">
+      <ul>
+        <li>
+          <span>已选</span>
+          <span>白色</span>
+        </li>
+        <li>
+          <span>促销</span>
+          <span>是</span>
+        </li>
+        <li>
+          <span>送至</span>
+          <span>上海市</span>
+        </li>
+        <li>
+          <span>运费</span>
+          <span>免运费</span>
+        </li>
+      </ul>
+    </div>
+    <!-- 运费 -->
+    <!-- 详情 -->
+    <div class="goods_parameter">
+      <div id="segmentedControl" class="mui-segmented-control">
+        <a class="mui-control-item mui-active" href="#item1">图文详情</a>
+        <a class="mui-control-item" href="#item2"> 规格参数</a>
+      </div>
+      <div>
+        <div id="item1" class="mui-control-content mui-active">
+          {{@item.goods_introduce}}
+        </div>
+        <div id="item2" class="mui-control-content">
+          <ul>
+              {{each item.attrs value index}}
+            <li>
+              <div class="g_title">{{value.attr_name.split('-')[0]}}</div>
+              <div class="g_content">
+                <span>{{value.attr_name.split('-')[1]}}</span>
+                <span>{{value.attr_value}}</span>
+              </div>
+            </li>
+           {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 详情 -->
+  </script>
+  <!-- 模板 -->
+</body>
+  
+<script src="/lib/mui/js/mui.min.js"></script>
+<script src="/lib/zepto/zepto.js"></script>
+<script src="/lib/arttemplate/template-web.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/goods_detail.js"></script>
+
+</html>
