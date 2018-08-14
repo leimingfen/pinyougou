@@ -6,6 +6,9 @@
    color: rgb(19, 19, 19);
    justify-content: space-between;
    align-items: center;
+   #delete_btn{
+    display: none;
+   }  
  }
 
  .pyg_view {
@@ -17,25 +20,88 @@
        border-top: 1px solid #b8b8b8;
        border-bottom: 1px solid #b8b8b8;
        padding: 10px 10px;
+       display: flex;
+       justify-content: space-between;
+       .site_prices{
+
+         color: rgb(240, 70, 70);
+       }
+     }
+     .static_site {
+       background-color: #fff;
+       padding: 10px;
+       border-top: 1px solid #b8b8b8;
+       border-bottom: 1px solid #b8b8b8;
+       position: relative;
+       i{
+         position: absolute;
+         top: 35%;
+         right: 10px;;
+         font-size: 25px;
+         color: rgb(117, 117, 117);
+       }
+       p {
+         padding-top: 10px;
+         line-height: 1
+       }
      }
    }
    .indent {
      ul {
        li {
-         a {
-           //  display: flex;
-           .mui-media-object {
-             line-height: 42px;
-             max-width: 70px;
-             height: 70px;
-           }
-           div {
-             .mui-ellipsis{
-               color: rgb(238, 124, 30);
+         padding: 10px 5px;
+         background-color: rgb(255, 255, 255);
+         border-bottom: 1px solid #b8b8b8;
+      
+           display: flex;
+           align-items: center;
+           .ck_box{
+             flex: 1;
+             display: none;
+            //  display: flex;
+             justify-content: center;
+             input {
+               position: static;
              }
            }
-         }
+           .img {
+             flex: 2; 
+             background-color: rgb(233, 122, 122);
+             margin-right: 8px;
+           }
+           .mui-right {
+             flex: 4;
+             .goods_price_tools {
+               padding-top: 5px;
+               display: flex; //  flex-direction: column;
+               align-items: center;
+               justify-content: space-between;
+               .g_price {
+                 color: rgb(238, 124, 30);
+               }
+               .g_tools {
+                 padding-right: 10px;
+                 display: none;
+               }
+             }
+           }
        }
      }
    }
+ }
+
+ #pyg_body.hide_tools{
+   #delete_btn{
+    display: block;
+   }
+   .ck_box{
+    display: flex;
+   }
+   .g_tools{
+     display: block;
+   }
+ }
+
+ body{
+   display: none;
  }

@@ -86,6 +86,7 @@ $(function () {
 $('.pyg_view ul').on('tap','a',function(){
   console.log(123123123123132);
   location.href=this.href;
+  
 })
 
 

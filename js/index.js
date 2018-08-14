@@ -35,13 +35,24 @@ $(function () {
   //商品列表
   function index_goodslist(){
     $.get("home/goodslist",function(res){
-      // console.log(res);
+      console.log(res);
       
       var html=template('index_goodslist',{item:res.data})
       $('.index_goodslist').html(html);
+      $('.goods').on('tap','.goods_self',function(){
+        console.log(123123123132);
+        
+        sessionStorage.setItem('ulr',location.href);
+        // 跳转到商品详情页面
+        // return;
+        location.href=this.href;
+        
+      })
     })
   }
+function eventList(){
 
+}
 
 
 

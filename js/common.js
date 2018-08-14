@@ -46,18 +46,34 @@ $(function(){
       } else {　　　　
           return false;
       }
-    }
-    
-
+    },
+    token:function(){
+      var token;
+       if(localStorage.getItem('userInfo')){
+     
+        token = JSON.parse(localStorage.getItem('userInfo')).token;
+       
+       }else{
+        token="";
+       }
+       return token;
+    },
+  isLogin:function(){
+    return localStorage.getItem('userInfo')
+  }
   });
 
   eventList();
   function eventList(){
     //点击购物车
     $('header').on('tap','.shopping_cart',function(){
-      console.log("购物车");
-      console.log(this.href);
+      // console.log("购物车");
+      // console.log(this.href);
       
+      $.post('my/cart/add',{},function(res){
+        console.log(res);
+        
+      })
       // location.href=this.href;
       // location.href="/pages/cart.html";
       //获取token 如果有 跳转到购物车页面 
@@ -70,6 +86,7 @@ $(function(){
       // location.href="/pages/register.html";
       //获取token 如果有 跳转到购物车页面 
       // 没有跳转登录页面
+    
     })
   }
 })

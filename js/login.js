@@ -1,4 +1,5 @@
 $(function(){
+  var GoodsObj;
   init();
   function init(){
     eventList()
@@ -12,13 +13,26 @@ $(function(){
       }
       if(password.lenght<6){
         mui.toast('密码不合法')
+        return;
       }
       //发送请求
       $.post('login',{username:username,password:password},function(res){
         console.log(res);
+        GoodsObj=res.data;
         if(res.meta.status==200){
           mui.toast(res.meta.msg)
-          location.href="/index.html"
+         
+                // 把获取到的数据存到本地储存中
+        localStorage.setItem("userInfo",JSON.stringify(GoodsObj));
+        setTimeout(function(){
+          var pageName=sessionStorage.getItem("pageName")
+          if(pageName){
+            location.href=pageName;
+          }else{
+            location.hrer="/index.html"
+          }
+        },1000)
+       
         }else{
           mui.toast(res.meta.msg);
         }
