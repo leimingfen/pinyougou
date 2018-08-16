@@ -23,9 +23,9 @@ $(function(){
           mui.toast(res.meta.msg)
          
                 // 把获取到的数据存到本地储存中
-        localStorage.setItem("userInfo",JSON.stringify(GoodsObj));
+        $.setLocal(GoodsObj);
         setTimeout(function(){
-          var pageName=sessionStorage.getItem("pageName")
+          var pageName=$.getSession();
           if(pageName){
             location.href=pageName;
           }else{

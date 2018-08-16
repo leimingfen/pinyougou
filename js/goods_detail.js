@@ -35,7 +35,7 @@ $(function () {
       if(!$.isLogin()){
         mui.toast('未登录');
         // 把获取到的数据存到本地储存中
-        sessionStorage.setItem('pageName',location.href)
+        $.setSession();
         setTimeout(function () {
           location.href = "/pages/login.html";
         }, 1000);
@@ -67,7 +67,7 @@ $(function () {
           console.log(res);
           if (res.meta.status == 401) {
             mui.toast('登录未成功')
-            sessionStorage.setItem("pageName",location.href);
+            $.setSession();
             setTimeout(function(){
               location.href = "/pages/login.html"
             },1000)

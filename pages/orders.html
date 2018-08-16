@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1,minimum-scale=1">
+  <link rel="stylesheet" href="/lib/mui/css/mui.css">
+  <link rel="stylesheet" href="/lib/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/orders.css">
+  <title>品优购-购物车</title>
+</head>
+
+<body id="pyg_body">
+
+  <!-- 头部 -->
+  <header id="orders_header" class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">订单</h1>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  </header>
+  <!-- 头部 -->
+  <div class="pyg_view">
+    <!-- 导航 -->
+    <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary">
+      <a class="mui-control-item mui-active" href="#item1">全部</a>
+      <a class="mui-control-item" href="#item2">代付款</a>
+      <a class="mui-control-item" href="#item3">代发货</a>
+    </div>
+    <!-- 子项 -->
+    <div class="indent_num">
+      <div id="item1" class="mui-control-content mui-active">
+        <ul>
+           
+         
+        </ul>
+      </div>
+
+
+
+      <div id="item2" class="mui-control-content">
+
+        正在开发中
+      </div>
+      <div id="item3" class="mui-control-content">
+        正在开发中啊，不要点了
+      </div>
+    </div>
+  </div>
+  <!-- 底部 -->
+  <footer class="pyg_footer">
+    <a href="/index.html">
+      <span class="fa fa-home"></span>
+      <p>首页</p>
+    </a>
+    <a href="/pages/goodsList.html">
+      <span class="fa fa-list-ul"></span>
+      <p>分类</p>
+    </a>
+    <a href="/pages/cart.html" class="shopping_cart">
+      <span class="fa fa-shopping-cart"></span>
+      <p>购物车</p>
+    </a>
+    <a href="/pages/me.html" class="my_pyg">
+      <span class="fa fa-user-circle-o"></span>
+      <p>我的</p>
+    </a>
+  </footer>
+
+  <!-- 模板 -->
+
+  <!-- 购物车 -->
+  <script id="orders" type="text/html">
+    {{each data value index}}
+    <li>
+        <div class="ind_title">
+          <span class="">订单编号:</span>
+          <div class="ind_num mui-ellipsis">{{value.order_number}}</div>
+        </div>
+        <div class="ind_price">
+          <span>￥</span>
+          <span>{{value.order_price}}</span>
+        </div>
+      </li>
+      {{/each}}
+  </script>
+  <!-- 模板 -->
+</body>
+
+<script src="/lib/mui/js/mui.min.js"></script>
+<script src="/lib/zepto/zepto.js"></script>
+<script src="/lib/arttemplate/template-web.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/orders.js"></script>
+
+</html>

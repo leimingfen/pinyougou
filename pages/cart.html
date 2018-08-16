@@ -15,15 +15,12 @@
 
   <!-- 头部 -->
   <!-- 头部 -->
-  <header class="pyg_header">
-    <div class="cart_header">
-      <div>
-        <button id="delete_btn" type="button" class="mui-btn mui-btn-primary mui-btn-outlined  mui-pull-left">删除</button>
-      </div>
-      <span>购物车</span>
+  <header id="cart_header" class="mui-bar mui-bar-nav mui-clearfix">
+      <h1 class="mui-title">购物车</h1>
+      <button id="delete_btn" type="button" class="mui-btn mui-btn-primary mui-btn-outlined  mui-pull-left">删除</button>
       <button id="upd_btn" type="button" class="mui-btn mui-btn-primary mui-btn-outlined mui-pull-right">编辑</button>
-    </div>
-  </header>
+    </header>
+
   <div class="pyg_view">
     <div class="deliverySite">
       <P>配送地址</P>
@@ -69,7 +66,7 @@
       <span class="fa fa-shopping-cart"></span>
       <p>购物车</p>
     </a>
-    <a href="/pages/register.html" class="my_pyg">
+    <a href="/pages/me.html" class="my_pyg">
       <span class="fa fa-user-circle-o"></span>
       <p>我的</p>
     </a>
@@ -83,7 +80,7 @@
     <li data-obj="{{value}}">
   
         <div class="mui-input-row mui-checkbox mui-left ck_box" >
-          <input name="checkbox" value="Item 1" type="checkbox">
+          <input class="check_box" name="checkbox" value="Item 1" type="checkbox" >
         </div>
         <div class="img">
           <img class="goods_small_logo" src="{{value.goods_small_logo}}">
@@ -95,7 +92,7 @@
           </div>
           <div class='goods_price_tools'>
             <div class="g_price">￥
-              <span >{{value.goods_price}}</span>
+              <span class="">{{value.goods_price}}</span>
             </div>
             <div class="g_tools">
               <div id="num_btn" class="mui-numbox" data-numbox-min='1' data-numbox-max='{{value.goods_number}}'>

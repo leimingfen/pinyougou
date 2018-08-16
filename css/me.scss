@@ -1,0 +1,92 @@
+body{
+  display: none;
+}
+
+.pyg_view{
+  padding: 20px 10px;
+} 
+ 
+ 
+ //用戶信息
+ .userinfo {
+   border: 1px solid rgb(219, 219, 219);
+   display: flex;
+   background-color: #fff;
+   padding: 10px;
+   .userPto {
+     font-size: 40px;
+     flex: 1;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   .userMessage {
+     flex: 4;
+     .usserEmail{
+       color: #666;
+       font-size: 14px;
+     }
+   }
+ }
+
+
+
+//  订单管理
+.order_manages{
+  background-color: #fff;
+  margin-top: 10px;
+  border: 1px solid rgb(219, 219, 219);
+  .om_title{
+    border-bottom: 1px solid rgb(219, 219, 219);
+    padding: 10px;
+  }
+  .om_content{
+    display: flex;
+    color: rgb(0, 122, 255);
+    a{
+      padding: 10px;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      i{
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+//密码地址管理
+.order_user{
+  background-color: #fff;
+  margin-top: 10px;
+  border: 1px solid rgb(219, 219, 219);
+  a{
+    padding: 10px;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    .mui-pull-right{
+      color: #666;
+      font-size: 16px;
+    }
+  }
+  a:last-child{
+    border-bottom: none;
+  }
+}
+//客服意见
+.order_service{
+  a:nth-child(1){
+    .mui-pull-right{
+      color: #000;
+    }
+  }
+}
+
+
+
+//  退出按鈕
+ .loginOut_btn{
+   margin-top: 30px;
+ }
